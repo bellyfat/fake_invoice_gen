@@ -206,7 +206,7 @@ for i in range(START_FILE_INDEX, END_FILE_INDEX):
         amt_list[i] = round(qty_list[i] * price_list[i],2)
         sub_total += amt_list[i]
 
-    ca_9_percent = round(sub_total * 0.9, 2)
+    ca_9_percent = round(sub_total * 0.09, 2)
     total_val = round(sub_total + ca_9_percent, 2)
     total_amt_due = round(total_val + amt_due, 2)
 
@@ -263,9 +263,9 @@ for i in range(START_FILE_INDEX, END_FILE_INDEX):
     sub_total_tf.paragraphs[0].font.size = Pt(14)
     sub_total_tf.paragraphs[0].font.name = 'Arial'
 
-    sub_total_tf.paragraphs[0].text = '$' + str(ca_9_percent)
-    sub_total_tf.paragraphs[0].font.size = Pt(14)
-    sub_total_tf.paragraphs[0].font.name = 'Arial'
+    sub_total_tf.paragraphs[1].text = '$' + str(ca_9_percent)
+    sub_total_tf.paragraphs[1].font.size = Pt(14)
+    sub_total_tf.paragraphs[1].font.name = 'Arial'
 
     # set total tf 
     total_tf.paragraphs[0].text = '$' + str(total_val)
